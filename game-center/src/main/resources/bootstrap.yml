@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: game-center
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        # 配置文件的环境
+        group: ${spring.profiles.active}
+        # 配置文件的格式
+        file-extension: yaml
+        # 配置中心的地址
+        server-addr: nacos.wjysky.com
+        # 配置文件prefix
+        prefix: ${spring.application.name}
+
+log:
+  path: D:/logs/game-center
