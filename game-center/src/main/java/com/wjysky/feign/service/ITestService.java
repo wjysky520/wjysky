@@ -15,6 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "game-service", fallback = TestHystrix.class)
 public interface ITestService {
 
-    @RequestMapping(value = "/test/info", method = RequestMethod.POST)
+    @RequestMapping(value = "/game-service/test/info", method = RequestMethod.POST)
     String query(@RequestParam(value = "msg") String msg);
 }

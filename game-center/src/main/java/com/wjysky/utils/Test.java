@@ -11,6 +11,8 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.UUID;
 
 public class Test extends JFrame{
     private PrintWriter printWriter;
@@ -72,11 +74,12 @@ public class Test extends JFrame{
 //        map.put("businessLabelList", list);
 //        String str = JSON.toJSONString(map);
 //        System.out.println(str);
-        System.out.println("20230513".substring(0, 6));
-        List<String> list = new ArrayList<>();
-        list.add(null);
-        System.out.println(list.get(0) == "_n1111".split("_")[0]);
-        System.out.println(JSON.toJSONString(list));
+//        System.out.println("20230513".substring(0, 6));
+//        List<String> list = new ArrayList<>();
+//        list.add(null);
+//        System.out.println(list.get(0) == "_n1111".split("_")[0]);
+//        System.out.println(JSON.toJSONString(list));
+        System.out.println(UUID.randomUUID().toString().toUpperCase().replace("-", ""));
     }
 }
 

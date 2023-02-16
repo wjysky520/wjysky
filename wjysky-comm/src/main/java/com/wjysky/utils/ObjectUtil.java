@@ -1,6 +1,6 @@
 package com.wjysky.utils;
 
-import com.wjysky.pojo.DataApi;
+import com.wjysky.entity.DataApi;
 import io.netty.buffer.ByteBuf;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.http.util.TextUtils;

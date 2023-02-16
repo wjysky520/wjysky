@@ -1,4 +1,4 @@
-package com.wjysky.pojo;
+package com.wjysky.entity;
 
 /**
  * @ClassName : Constant

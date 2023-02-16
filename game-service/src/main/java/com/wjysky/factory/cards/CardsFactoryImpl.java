@@ -1,8 +1,8 @@
 package com.wjysky.factory.cards;
 
 import com.wjysky.factory.cards.fact.IPokerFactory;
-import com.wjysky.pojo.bo.CardsCfgBO;
-import com.wjysky.pojo.enums.CardsGroupEnum;
+import com.wjysky.entity.bo.CardsCfgBO;
+import com.wjysky.entity.enums.CardsGroupEnum;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

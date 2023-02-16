@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: game-service
+  cloud:
+    nacos:
+      config:
+        # 配置中心的地址
+        server-addr: nacos.wjysky.com
+        ext-config[0]:
+          file-extension: yaml
+          group: ${spring.profiles.active}
+          data-id: game-service-${spring.profiles.active}.yaml
+          refresh: true
+        ext-config[1]:
+          file-extension: yaml
+          group: DEFAULT_GROUP
+          data-id: rocketmq.yaml
+          refresh: true
+
+#        # 配置中心的地址
+#        server-addr: nacos.wjysky.com
+#        bootstrap:
+#          # 是否开启 Nacos 配置预加载功能。默认为 false。
+#          enable: true
+#          # 是否开启 Nacos 支持日志级别的加载时机。默认为 false。
+#          log-enable: true
+#        # 使用的 Nacos 配置集的 dataId,多个使用逗号隔开。
+#        data-ids: game-center-${spring.profiles.active}.yaml,rocketmq-${spring.profiles.active}.yaml
+#        # 配置文件的环境
+#        group: ${spring.profiles.active}
+#        # 使用的 Nacos 配置集的配置格式
+#        file-extension: yaml

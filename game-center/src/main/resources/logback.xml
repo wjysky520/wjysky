@@ -58,6 +58,15 @@
     <logger name="java.sql.PreparedStatement" level="DEBUG"/>
 
     <!-- 配置开发环境，多个使用逗号隔开(例如：dev,sit) -->
+    <springProfile name="local">
+        <!--定义日志输出级别-->
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="FILE"/>
+        </root>
+    </springProfile>
+
+    <!-- 配置开发环境，多个使用逗号隔开(例如：dev,sit) -->
     <springProfile name="dev">
         <!--定义日志输出级别-->
         <root level="INFO">

@@ -1,6 +1,6 @@
-package com.wjysky.pojo.bo.poker;
+package com.wjysky.entity.bo.poker;
 
-import com.wjysky.pojo.bo.PlayerInfoBO;
+import com.wjysky.entity.bo.PlayerInfoBO;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package com.wjysky.pojo.bo.poker;
+package com.wjysky.entity.bo.poker;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

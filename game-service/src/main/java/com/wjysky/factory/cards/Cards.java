@@ -1,7 +1,7 @@
 package com.wjysky.factory.cards;
 
-import com.wjysky.pojo.DataApi;
-import com.wjysky.pojo.bo.poker.PokerBO;
+import com.wjysky.entity.DataApi;
+import com.wjysky.entity.bo.poker.PokerBO;
 
 import java.util.List;
 import java.util.Map;

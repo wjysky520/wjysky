@@ -1,4 +1,4 @@
-package com.wjysky.pojo;
+package com.wjysky.entity;
 
 import lombok.Getter;
 import lombok.Setter;

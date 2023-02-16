@@ -6,6 +6,7 @@ import com.wjysky.entity.db.SysCfg;
 import com.wjysky.entity.dto.FileOpenDTO;
 import com.wjysky.entity.query.SysCfgQuery;
 import com.wjysky.feign.service.ITestService;
+import com.wjysky.mq.producer.MQProducerService;
 import com.wjysky.service.ISysService;
 import com.wjysky.utils.ObjectUtil;
 import lombok.RequiredArgsConstructor;
@@ -22,14 +23,13 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -42,6 +42,14 @@ public class UserController {
     private final ITestService testService;
 
     private final ISysService sysService;
+
+    private final MQProducerService mqProducerService;
+
+    @Value("${rocketmq.topic[0]}")
+    private String topic;
+
+    @Value("${rocketmq.tag[0]}")
+    private String tag;
 
     /**
      *
@@ -58,6 +66,7 @@ public class UserController {
     public String test() {
         log.info("---------------");
         testService.query("你好，我来了");
+        mqProducerService.syncSendMsg(topic, tag, "王俊元-----------", "11111111");
         return "2131242521512";
     }
 

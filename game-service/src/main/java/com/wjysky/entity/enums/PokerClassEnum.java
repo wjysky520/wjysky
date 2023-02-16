@@ -1,4 +1,4 @@
-package com.wjysky.pojo.enums;
+package com.wjysky.entity.enums;
 
 /**
  * @ClassName : PokerGameEnum
