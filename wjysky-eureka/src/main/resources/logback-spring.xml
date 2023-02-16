@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
 
-    <!-- 获取yml中的log地址 -->
-    <springProperty scope="context" name="logHome" source="log.path" defaultValue="D://logs"/>
+    <!-- springboot配置文件的加载顺序为：bootstrap.properties -> bootstrap.yml -> application.properties -> application.yml -->
+    <!-- 配置文件加载顺序为：logback.xml —> application.properties —> logback-spring.xml，如果直接通过${参数key}的形式是无法获取到对应的参数值 -->
+    <!-- source指定的是application.yml配置文件中key，其它地方直接用${log.path}引用这个值 -->
+    <!-- 解决在相对路径下生成log.path_IS_UNDEFINED的问题，增加defaultValue -->
+    <springProperty scope="context" name="log.home" source="log.path" defaultValue="D://logs"/>
 
-    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
-    <property name="LOG_HOME" value="${logHome}" />
+    <!-- app.name根据你的应用名称修改 -->
+    <springProperty scope="context" name="app.name" source="spring.application.name" defaultValue="wjysky-gateway"/>
+
+    <!-- 定义日志文件的存储地址，勿在LogBack的配置中使用相对路径 -->
+    <property name="LOG_HOME" value="${log.home}"/>
+    <!-- 应用名称 -->
+    <property name="APP_NAME" value="${app.name}"/>
 
     <property name="CONSOLE_LOG_PATTERN" value="%date{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) [%boldYellow(%thread)] %boldGreen(%logger{10})\(%F:%L\\) %m %n"/>
 
-    <!--控制台日志， 控制台输出 -->
+    <!-- 控制台日志， 控制台输出 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度,%msg：日志消息，%n是换行符-->
@@ -17,11 +25,11 @@
         </encoder>
     </appender>
 
-    <!--文件日志， 按照每天生成日志文件 -->
+    <!-- 文件日志， 按照每天生成日志文件 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->
-            <FileNamePattern>${LOG_HOME}/wjysky-gateway.log.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <FileNamePattern>${LOG_HOME}/${APP_NAME}/${APP_NAME}.%d{yyyyMMdd}.log</FileNamePattern>
             <!--日志文件保留天数-->
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
@@ -42,7 +50,7 @@
     <logger name="org.hibernate.engine.QueryParameters" level="DEBUG" />
     <logger name="org.hibernate.engine.query.HQLQueryPlan" level="DEBUG" />
 
-    <!--myibatis log configure-->
+    <!-- myibatis log configure-->
     <logger name="com.apache.ibatis" level="TRACE"/>
     <logger name="java.sql.Connection" level="DEBUG"/>
     <logger name="java.sql.Statement" level="DEBUG"/>

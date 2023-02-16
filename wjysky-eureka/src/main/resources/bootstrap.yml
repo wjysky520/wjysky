@@ -16,4 +16,4 @@ spring:
         prefix: ${spring.application.name}
 
 log:
-  path: D:/logs/game-center
+  path: D:/logs/
