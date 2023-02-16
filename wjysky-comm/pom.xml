@@ -152,12 +152,14 @@
 			<version>4.12</version>
 		</dependency>
 
-		<!-- lombok-->
+		<!-- lombok S -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
+			<version>1.18.8</version>
+			<scope>provided</scope>
 		</dependency>
+		<!-- lombok E -->
 
 		<!-- Skywalking S -->
 		<dependency>
@@ -176,6 +178,14 @@
 			<version>3.1.7</version>
 		</dependency>
 		<!-- Skywalking E -->
+
+		<!-- jackson S -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.13.1</version>
+		</dependency>
+		<!-- jackson E -->
 	</dependencies>
 
 	<build>

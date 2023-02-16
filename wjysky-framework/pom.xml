@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.wjysky</groupId>
+        <artifactId>wjysky-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>wjysky-framework</artifactId>
+    <description>框架层</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>wjysky-framework-dao</module>
+        <module>wjysky-framework-mvc</module>
+        <module>wjysky-framework-service</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 项目依赖 start -->
+            <dependency>
+                <groupId>com.wjysky</groupId>
+                <artifactId>wjysky-comm</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <!-- 项目依赖 end -->
+        </dependencies>
+    </dependencyManagement>
+</project>

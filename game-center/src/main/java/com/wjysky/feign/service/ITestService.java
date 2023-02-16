@@ -1,10 +1,14 @@
 package com.wjysky.feign.service;
 
+import com.wjysky.entity.DataApi;
+import com.wjysky.entity.db.SystemConfig;
 import com.wjysky.feign.hystrix.TestHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 /**
  * @ClassName : TestService
@@ -16,5 +20,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ITestService {
 
     @RequestMapping(value = "/game-service/test/info", method = RequestMethod.POST)
-    String query(@RequestParam(value = "msg") String msg);
+    DataApi<List<SystemConfig>> query(@RequestParam(value = "msg") String msg);
 }

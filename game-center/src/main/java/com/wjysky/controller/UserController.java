@@ -1,8 +1,10 @@
 package com.wjysky.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.wjysky.entity.DataApi;
 import com.wjysky.entity.ao.GetSysCfgListAO;
 import com.wjysky.entity.db.SysCfg;
+import com.wjysky.entity.db.SystemConfig;
 import com.wjysky.entity.dto.FileOpenDTO;
 import com.wjysky.entity.query.SysCfgQuery;
 import com.wjysky.feign.service.ITestService;
@@ -63,11 +65,11 @@ public class UserController {
      * @throws
     **/
     @RequestMapping("test")
-    public String test() {
+    public List<SystemConfig> test() {
         log.info("---------------");
-        testService.query("你好，我来了");
-        mqProducerService.syncSendMsg(topic, tag, "王俊元-----------", "11111111");
-        return "2131242521512";
+        DataApi<List<SystemConfig>> dataApi = testService.query("你好，我来了");
+        mqProducerService.syncSendMsg(topic, tag, dataApi.getData(), dataApi.getSystemTime() + "");
+        return dataApi.getData();
     }
 
     @RequestMapping("getSysCfgList")

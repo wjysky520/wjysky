@@ -1,9 +1,15 @@
 package com.wjysky.feign.controller;
 
+import com.wjysky.entity.DataApi;
+import com.wjysky.entity.db.SystemConfig;
+import com.wjysky.facade.ISystemConfigFacade;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @ClassName : TestController
@@ -14,13 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/test")
 @Slf4j
+@RequiredArgsConstructor
 public class TestController {
 
-
+    private final ISystemConfigFacade systemConfigFacade;
 
     @RequestMapping(value = "/info")
-    public String info(@RequestParam(value = "msg") String msg) {
+    public DataApi<List<SystemConfig>> info(@RequestParam(value = "msg") String msg) {
         log.info("收到了消息：" + msg);
-        return "welcome to demo-springboot: " + msg;
+        return DataApi.generateSuccessMsg(systemConfigFacade.getAllSystemConfig());
     }
 }
