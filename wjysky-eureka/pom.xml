@@ -6,13 +6,13 @@
     <parent>
         <groupId>com.wjysky</groupId>
         <artifactId>wjysky-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.1.0</version>
         <relativePath>../wjysky-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>com.wjysky</groupId>
     <artifactId>wjysky-eureka</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.1.0</version>
     <name>wjysky-eureka</name>
     <description>Demo project for Spring Boot</description>
 
