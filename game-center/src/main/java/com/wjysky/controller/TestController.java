@@ -28,7 +28,7 @@ public class TestController {
             StringBuilder sb = new StringBuilder();
             Files.lines(Paths.get(filename)).parallel().forEachOrdered(sb::append);
             System.out.println(sb.toString());
-
+            JSON.toJSONString(sb);
             byte[] bytes = new BASE64Decoder().decodeBuffer(sb.toString());
 
             System.out.println(new String(bytes, "GBK"));
