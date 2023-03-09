@@ -7,7 +7,7 @@ server:
 eureka:
   instance:
     instance-id: ${server.name}
-    hostname: 39.100.224.43
+    hostname: localhost
   client:
     fetch-registry: true
     register-with-eureka: true
@@ -89,6 +89,12 @@ pagehelper:
 
 log:
   path: D:/logs/game-center
+
+minio:
+  url: http://file.wjysky.com     #安装minio的服务器ip
+  accessKey: wjysky               #minio登录账号
+  secretKey: wjy19911213353       #minio登录密码
+  bucket: public                  #创建的存储桶名称（可界面创建，亦可sdk代码创建）
 
 rocketmq:
   name-server: 39.100.224.43:9876

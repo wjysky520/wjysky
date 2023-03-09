@@ -15,8 +15,18 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
 
 spring:
+  cloud:
+    nacos:
+      config:
+        enabled: false
+        refresh-enabled: false
+      discovery:
+        enabled: false
+        instance-enabled: false
+  application:
+    name: game-service
   datasource: # 本地
-    url: jdbc:mysql://39.100.224.43:3306/wjysky?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true&useSSL=false&failOverReadOnly=false&allowMultiQueries=true
+    url: jdbc:mysql://39.100.224.43:3306/newhow?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true&useSSL=false&failOverReadOnly=false&allowMultiQueries=true
     username: wjysky
     password: wjy19911213353
     driver-class-name: com.mysql.jdbc.Driver
