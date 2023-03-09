@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.InputStream;
 
 /**
@@ -82,13 +83,14 @@ public class MinioClientUtil {
      * @param fileSize 文件大小
      * @author 王俊元（wangjunyuan@talkweb.com.cn）
      * @date 2023/3/9 16:45
-     * @return void
+     * @return String
      **/
-    public void uploadFile(String fileName, InputStream ins, long fileSize) throws Exception {
+    public String uploadFile(String fileName, InputStream ins, long fileSize) throws Exception {
         init();
         PutObjectArgs.Builder putObjectArgsBuilder = PutObjectArgs.builder().bucket(bucket)
                 .object(fileName).stream(ins, fileSize, 5 * 1024 * 1024); // minio存储分片除最后一片外其余分片最小限制为5MB
-        client.putObject(putObjectArgsBuilder.build());
+        ObjectWriteResponse response = client.putObject(putObjectArgsBuilder.build());
+        return url + File.separator + bucket + File.separator + fileName;
     }
 
     /**
