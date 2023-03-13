@@ -20,7 +20,7 @@ import java.io.InputStream;
 @RequiredArgsConstructor
 @Component
 @Slf4j
-public class MinioClientUtil {
+public class MinioUtil {
 
     private final MinioProperties properties;
 

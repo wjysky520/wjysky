@@ -10,7 +10,7 @@ import com.wjysky.entity.query.SysCfgQuery;
 import com.wjysky.feign.service.ITestService;
 import com.wjysky.mq.producer.MQProducerService;
 import com.wjysky.service.ISysService;
-import com.wjysky.utils.MinioClientUtil;
+import com.wjysky.utils.MinioUtil;
 import com.wjysky.utils.ObjectUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -46,7 +46,7 @@ public class UserController {
 
     private final MQProducerService mqProducerService;
 
-    private final MinioClientUtil minioClientUtil;
+    private final MinioUtil minioUtil;
 
     @Value("${rocketmq.topic[0]}")
     private String topic;
@@ -71,9 +71,9 @@ public class UserController {
         DataApi<List<SystemConfig>> dataApi = testService.query("你好，我来了");
         File file1 = new File("C:\\Users\\admin\\Pictures\\desktop\\2.jpg");
         File file2 = new File("C:\\Users\\admin\\Desktop\\1.jpg");
-        minioClientUtil.uploadFile("2.jpg", new FileInputStream(file1), file1.length());
-        ObjectUtil.inputStream2file(minioClientUtil.downloadFile("1.jpg"), file2);
-        log.info(minioClientUtil.getMinioURL("1.jpg", 7 * 24 * 60 * 60));
+        minioUtil.uploadFile("2.jpg", new FileInputStream(file1), file1.length());
+        ObjectUtil.inputStream2file(minioUtil.downloadFile("1.jpg"), file2);
+        log.info(minioUtil.getMinioURL("1.jpg", 7 * 24 * 60 * 60));
         mqProducerService.syncSendMsg(topic, tag, dataApi.getData(), dataApi.getSystemTime() + "");
         return dataApi.getData();
     }
