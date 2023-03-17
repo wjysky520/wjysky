@@ -66,6 +66,28 @@ spring:
   resources:
     static-locations: classpath:/
 
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器IP
+    host: 39.100.224.43
+    # Redis服务器端口
+    port: 6379
+    # 连接超时时间（毫秒）
+    timeout: 30000
+    # Redis服务器连接密码（默认为空）
+    password: wjysky
+    jedis:
+      pool:
+        # 连接池最大连接数，默认为8，使用负数表示没有限制
+        max-active: 8
+        # 默认连接数最大空闲的连接数，默认为8，使用负数表示没有限制
+        max-idle: 8
+        # 默认连接池最小空闲的连接数，默认为0，允许设置0和正数
+        min-idle: 0
+        # 连接池最大阻塞等待时间，单位：毫秒。默认为-1，表示不限制
+        max-wait: -1
+
 servlet:
   multipart:
     enabled: true
@@ -95,6 +117,7 @@ minio:
   accessKey: wjysky               #minio登录账号
   secretKey: wjy19911213353       #minio登录密码
   bucket: public                  #创建的存储桶名称（可界面创建，亦可sdk代码创建）
+
 
 rocketmq:
   name-server: 39.100.224.43:9876
