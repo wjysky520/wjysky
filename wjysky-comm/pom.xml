@@ -20,6 +20,7 @@
 		<java.version>1.8</java.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<junit.jupiter.api.version>5.9.2</junit.jupiter.api.version>
 		<okhttp3.version>4.9.0</okhttp3.version>
 	</properties>
 	<dependencies>
@@ -31,8 +32,6 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.8.2</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- 日志打印 S -->
@@ -44,17 +43,15 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.22</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>${log4j.vsrsion}</version>
+			<version>1.2.17</version>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
-			<version>1.2.3</version>
 		</dependency>
 		<!-- 日志打印 E -->
 
@@ -75,21 +72,6 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.8.1</version>
-		</dependency>
-
-<!--		<dependency>-->
-<!--			<groupId>org.springframework</groupId>-->
-<!--			<artifactId>spring-beans</artifactId>-->
-<!--			<version>RELEASE</version>-->
-<!--			<scope>compile</scope>-->
-<!--		</dependency>-->
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>RELEASE</version>
-			<scope>compile</scope>
 		</dependency>
 		<!-- 其他核心工具包 end -->
 
@@ -97,25 +79,21 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<!-- 前端页面管理 S -->
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf-spring4</artifactId>
-			<version>2.1.2.RELEASE</version>
+			<version>2.1.6.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf</artifactId>
-			<version>2.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>RELEASE</version>
-			<scope>compile</scope>
 		</dependency>
 		<!-- 前端页面管理 E -->
 
@@ -123,32 +101,28 @@
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId> <!-- Use 'netty-all' for 4.0 or above -->
-			<version>4.1.33.Final</version>
 		</dependency>
 		<!-- Socket通信 E -->
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-collections4</artifactId>
-			<version>4.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.8.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
-			<version>1.9.3</version>
+			<version>1.9.4</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.5.3</version>
 		</dependency>
 
 
@@ -156,15 +130,12 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
 		</dependency>
 
 		<!-- lombok S -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
-			<scope>provided</scope>
 		</dependency>
 		<!-- lombok E -->
 
@@ -182,7 +153,6 @@
 		<dependency>
 			<groupId>org.codehaus.janino</groupId>
 			<artifactId>janino</artifactId>
-			<version>3.1.7</version>
 		</dependency>
 		<!-- Skywalking E -->
 
@@ -190,7 +160,6 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-			<version>2.13.1</version>
 		</dependency>
 		<!-- jackson E -->
 
@@ -198,7 +167,6 @@
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>okhttp</artifactId>
-			<version>4.9.0</version>
 		</dependency>
 
 		<dependency>
@@ -234,7 +202,6 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-pool2</artifactId>
-			<version>2.11.1</version>
 		</dependency>
 		<!-- Spring Data Redis 默认使用 Jackson 作为 JSON 序列化的工具 -->
 		<dependency>
