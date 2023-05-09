@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: wjysky-eureka
+  cloud:
+    nacos:
+      config:
+        # 配置中心的地址
+        server-addr: nacos.wjysky.com
+        ext-config[0]:
+          data-id: wjysky-eureka-${spring.profiles.active}.yaml
+          group: ${spring.profiles.active}
+          refresh: true

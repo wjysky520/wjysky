@@ -1,0 +1,20 @@
+server:
+  port: 8761
+  name: wjysky-eureka
+
+eureka:
+  server:
+    # eviction-interval-timer-in-ms: 1000
+    enable-self-preservation: false
+  instance:
+    hostname: 127.0.0.1
+
+  client:
+    # Eureka服务注册中心会将自己作为客户端来尝试注册它自己，必須禁止
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+log:
+  path: D:/logs/game-eureka

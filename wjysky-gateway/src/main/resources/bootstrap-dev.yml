@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: wjysky-gateway
+  cloud:
+    nacos:
+      config:
+        # 配置中心的地址
+        server-addr: nacos.wjysky.com
+        ext-config[0]:
+          file-extension: yaml
+          group: ${spring.profiles.active}
+          data-id: wjysky-gateway-${spring.profiles.active}.yaml
+          refresh: true

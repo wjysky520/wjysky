@@ -29,7 +29,7 @@ spring:
     url: jdbc:mysql://39.100.224.43:3306/newhow?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true&useSSL=false&failOverReadOnly=false&allowMultiQueries=true
     username: wjysky
     password: wjy19911213353
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 10

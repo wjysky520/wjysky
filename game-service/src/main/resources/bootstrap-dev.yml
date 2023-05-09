@@ -16,3 +16,8 @@ spring:
           group: DEFAULT_GROUP
           data-id: rocketmq.yaml
           refresh: true
+        ext-config[2]:
+          file-extension: yaml
+          group: DEFAULT_GROUP
+          data-id: redis.yaml
+          refresh: true

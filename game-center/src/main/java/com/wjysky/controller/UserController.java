@@ -69,12 +69,16 @@ public class UserController {
     public List<SystemConfig> test() throws Exception {
         log.info("---------------");
         DataApi<List<SystemConfig>> dataApi = testService.query("你好，我来了");
-        File file1 = new File("C:\\Users\\admin\\Pictures\\desktop\\2.jpg");
-        File file2 = new File("C:\\Users\\admin\\Desktop\\1.jpg");
-        minioUtil.uploadFile("2.jpg", new FileInputStream(file1), file1.length());
-        ObjectUtil.inputStream2file(minioUtil.downloadFile("1.jpg"), file2);
-        log.info(minioUtil.getMinioURL("1.jpg", 7 * 24 * 60 * 60));
-        mqProducerService.syncSendMsg(topic, tag, dataApi.getData(), dataApi.getSystemTime() + "");
+        try {
+            File file1 = new File("C:\\Users\\admin\\Pictures\\desktop\\8.jpg");
+            File file2 = new File("C:\\Users\\admin\\Desktop\\1.jpg");
+            minioUtil.uploadFile("2.jpg", new FileInputStream(file1), file1.length());
+            ObjectUtil.inputStream2file(minioUtil.downloadFile("1.jpg"), file2);
+            log.info(minioUtil.getMinioURL("1.jpg", 7 * 24 * 60 * 60));
+            mqProducerService.syncSendMsg(topic, tag, dataApi.getData(), dataApi.getSystemTime() + "");
+        } catch (Exception e) {
+            log.error("业务异常", e);
+        }
         return dataApi.getData();
     }
 
