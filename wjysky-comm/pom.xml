@@ -34,23 +34,6 @@
 			<artifactId>junit-jupiter-api</artifactId>
 		</dependency>
 
-		<!-- 日志打印 S -->
-<!--		<dependency>-->
-<!--			<groupId>org.slf4j</groupId>-->
-<!--			<artifactId>slf4j-api</artifactId>-->
-<!--			<version>1.7.22</version>-->
-<!--		</dependency>-->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-core</artifactId>
-		</dependency>
-		<!-- 日志打印 E -->
-
 		<!-- JSON S -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -111,13 +94,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
-
-		<!-- lombok S -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-		<!-- lombok E -->
 
 		<!-- Skywalking S -->
 		<dependency>

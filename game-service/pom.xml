@@ -45,17 +45,9 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
-            <version>1.4.6.RELEASE</version>
+            <version>1.4.7.RELEASE</version>
         </dependency>
         <!-- Eureka E -->
-
-        <!-- Nacos S -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-            <version>2.0.0.RELEASE</version>
-        </dependency>
-        <!-- Nacos E -->
 
         <!-- Feign S -->
         <dependency>
@@ -131,11 +123,6 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <!-- H5 end -->
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>javax.servlet</groupId>

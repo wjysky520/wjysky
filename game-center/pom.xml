@@ -57,13 +57,6 @@
         </dependency>
         <!-- Eureka E -->
 
-        <!-- Nacos S -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-        <!-- Nacos E -->
-
         <!-- Feign S -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -143,11 +136,6 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <!-- H5 end -->
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
 
         <!-- Minio存储服务 S -->
         <dependency>

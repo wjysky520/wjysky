@@ -68,8 +68,8 @@ public class NettyServer {
             } catch (Exception e) {
                 log.info("Netty服务开启时异常", e);
             }
+            NettyServerHandler.getInstance().setServer(this);
         }).start();
-        NettyServerHandler.getInstance().setServer(this);
     }
 
     /**
@@ -187,7 +187,7 @@ public class NettyServer {
      * @Description 停止服务
      **/
     public void destroy() {
-        log.info("开始停止远昊设备Netty服务......");
+        log.info("开始停止Netty服务......");
         if (future != null && future.channel() != null) {
             future.channel().close(); // 直接关闭
             future = null;

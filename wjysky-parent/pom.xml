@@ -133,6 +133,33 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <!-- Nacos S -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!-- Nacos E -->
+
+        <!-- 日志打印 S -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
+        <!-- 日志打印 E -->
+
+        <!-- lombok S -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- lombok E -->
+    </dependencies>
+
 <!--    <repositories>-->
 <!--        <repository>-->
 <!--            <id>huaweiCloud</id>-->
