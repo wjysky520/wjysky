@@ -121,12 +121,6 @@
 
 		<!-- Minio存储服务 S -->
 		<dependency>
-			<groupId>com.squareup.okhttp3</groupId>
-			<artifactId>okhttp</artifactId>
-			<version>${okhttp3.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>io.minio</groupId>
 			<artifactId>minio</artifactId>
 			<version>8.5.2</version>

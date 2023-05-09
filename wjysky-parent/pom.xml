@@ -158,6 +158,28 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <!-- lombok E -->
+
+        <!-- okhttp3 S -->
+        <!-- 这里主要是配合Minio存储服务，因为Minio默认的okhttp3版本不匹配，因此需要手动引入对应版本的okhttp3 -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp3.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jetbrains.kotlin</groupId>
+                    <artifactId>kotlin-stdlib</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>1.6.20</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- okhttp3 S -->
     </dependencies>
 
 <!--    <repositories>-->
