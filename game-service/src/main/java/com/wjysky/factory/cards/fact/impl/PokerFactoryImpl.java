@@ -3,8 +3,8 @@ package com.wjysky.factory.cards.fact.impl;
 import com.wjysky.factory.cards.Cards;
 import com.wjysky.factory.cards.fact.IPokerFactory;
 import com.wjysky.factory.cards.proc.poker.FightLandlord;
-import com.wjysky.entity.bo.CardsCfgBO;
-import com.wjysky.entity.enums.PokerClassEnum;
+import com.wjysky.pojo.bo.CardsCfgBO;
+import com.wjysky.pojo.enums.PokerClassEnum;
 import org.springframework.stereotype.Component;
 
 /**

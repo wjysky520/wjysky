@@ -1,6 +1,6 @@
 package com.wjysky.facade;
 
-import com.wjysky.entity.db.SystemConfig;
+import com.wjysky.pojo.db.SystemConfig;
 
 import java.util.List;
 

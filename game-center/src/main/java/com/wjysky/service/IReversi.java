@@ -1,6 +1,6 @@
 package com.wjysky.service;
 
-import com.wjysky.entity.bo.reversi.Coordinate;
+import com.wjysky.pojo.bo.reversi.Coordinate;
 
 import java.util.List;
 

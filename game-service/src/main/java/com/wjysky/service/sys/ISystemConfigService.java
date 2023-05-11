@@ -1,6 +1,6 @@
 package com.wjysky.service.sys;
 
-import com.wjysky.entity.db.SystemConfig;
+import com.wjysky.pojo.db.SystemConfig;
 import com.wjysky.framework.dao.base.service.IWjyMybatisService;
 
 /**

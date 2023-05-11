@@ -1,16 +1,18 @@
 package com.wjysky.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.wjysky.entity.DataApi;
-import com.wjysky.entity.ao.GetSysCfgListAO;
-import com.wjysky.entity.db.SysCfg;
-import com.wjysky.entity.db.SystemConfig;
-import com.wjysky.entity.dto.FileOpenDTO;
-import com.wjysky.entity.query.SysCfgQuery;
+import com.example.components.idgenerator.IdGenerator;
+import com.example.components.minio.utils.MinioUtil;
+import com.wjysky.components.authorization.annotation.PermissionAnnotation;
+import com.wjysky.pojo.DataApi;
+import com.wjysky.pojo.ao.GetSysCfgListAO;
+import com.wjysky.pojo.db.SysCfg;
+import com.wjysky.pojo.db.SystemConfig;
+import com.wjysky.pojo.dto.FileOpenDTO;
+import com.wjysky.pojo.query.SysCfgQuery;
 import com.wjysky.feign.service.ITestService;
 import com.wjysky.mq.producer.MQProducerService;
 import com.wjysky.service.ISysService;
-import com.wjysky.utils.MinioUtil;
 import com.wjysky.utils.ObjectUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -48,6 +50,8 @@ public class UserController {
 
     private final MinioUtil minioUtil;
 
+    private final IdGenerator idGenerator;
+
     @Value("${rocketmq.topic[0]}")
     private String topic;
 
@@ -66,10 +70,13 @@ public class UserController {
      * @throws
     **/
     @RequestMapping("test")
+    @PermissionAnnotation
     public List<SystemConfig> test() throws Exception {
         log.info("---------------");
         DataApi<List<SystemConfig>> dataApi = testService.query("你好，我来了");
         try {
+            log.info("获取到hutool雪花算法ID：" + idGenerator.getId());
+            log.info("获取到自定义雪花算法ID：" + idGenerator.getSnowId());
             File file1 = new File("C:\\Users\\admin\\Pictures\\desktop\\8.jpg");
             File file2 = new File("C:\\Users\\admin\\Desktop\\1.jpg");
             minioUtil.uploadFile("2.jpg", new FileInputStream(file1), file1.length());

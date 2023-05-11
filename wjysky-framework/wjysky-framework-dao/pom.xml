@@ -8,11 +8,10 @@
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.wjysky</groupId>
     <artifactId>wjysky-framework-dao</artifactId>
     <version>1.0.0</version>
     <name>wjysky-framework-dao</name>
-    <description>Demo project for Spring Boot</description>
+    <description>数据库框架</description>
     <properties>
         <java.version>8</java.version>
     </properties>

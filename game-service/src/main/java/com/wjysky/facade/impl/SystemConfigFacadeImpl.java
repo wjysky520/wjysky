@@ -2,7 +2,7 @@ package com.wjysky.facade.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.wjysky.entity.db.SystemConfig;
+import com.wjysky.pojo.db.SystemConfig;
 import com.wjysky.facade.ISystemConfigFacade;
 import com.wjysky.service.sys.ISystemConfigService;
 import lombok.RequiredArgsConstructor;

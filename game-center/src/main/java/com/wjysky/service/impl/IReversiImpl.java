@@ -1,7 +1,7 @@
 package com.wjysky.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.wjysky.entity.bo.reversi.Coordinate;
+import com.wjysky.pojo.bo.reversi.Coordinate;
 import com.wjysky.service.IReversi;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

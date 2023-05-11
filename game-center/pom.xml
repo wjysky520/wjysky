@@ -42,6 +42,24 @@
             <artifactId>wjysky-framework-dao</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.wjysky</groupId>
+            <artifactId>wjysky-components-authorization</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wjysky</groupId>
+            <artifactId>wjysky-components-minio</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wjysky</groupId>
+            <artifactId>wjysky-components-idgenerator</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <!-- 项目依赖 end -->
 
 <!--        <dependency>-->

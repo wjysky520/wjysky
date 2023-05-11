@@ -1,7 +1,7 @@
 package com.wjysky.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.wjysky.entity.db.SysCfg;
+import com.wjysky.pojo.db.SysCfg;
 import org.springframework.stereotype.Repository;
 
 /**

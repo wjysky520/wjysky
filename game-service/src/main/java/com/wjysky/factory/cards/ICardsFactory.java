@@ -1,6 +1,6 @@
 package com.wjysky.factory.cards;
 
-import com.wjysky.entity.bo.CardsCfgBO;
+import com.wjysky.pojo.bo.CardsCfgBO;
 
 /**
  * @ClassName : ICardsFactory

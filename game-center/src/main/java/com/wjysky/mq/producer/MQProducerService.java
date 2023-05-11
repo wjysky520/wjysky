@@ -1,6 +1,6 @@
 package com.wjysky.mq.producer;
 
-import com.wjysky.entity.bo.MessageBody;
+import com.wjysky.pojo.bo.MessageBody;
 import com.wjysky.enums.MQMsgTypeEnum;
 import com.wjysky.utils.ObjectUtil;
 import lombok.extern.slf4j.Slf4j;

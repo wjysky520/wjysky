@@ -1,9 +1,9 @@
 package com.wjysky.factory.cards.proc.poker;
 
 import com.wjysky.factory.cards.proc.Poker;
-import com.wjysky.entity.bo.CardsCfgBO;
-import com.wjysky.entity.bo.poker.PokerBO;
-import com.wjysky.entity.bo.poker.PokerPlayerInfoBO;
+import com.wjysky.pojo.bo.CardsCfgBO;
+import com.wjysky.pojo.bo.poker.PokerBO;
+import com.wjysky.pojo.bo.poker.PokerPlayerInfoBO;
 import com.wjysky.utils.ObjectUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;

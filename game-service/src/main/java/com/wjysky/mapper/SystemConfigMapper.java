@@ -1,6 +1,6 @@
 package com.wjysky.mapper;
 
-import com.wjysky.entity.db.SystemConfig;
+import com.wjysky.pojo.db.SystemConfig;
 import com.wjysky.framework.dao.base.mapper.WjyMybatisMapper;
 
 /**

@@ -1,7 +1,7 @@
 package com.wjysky.factory.cards.fact;
 
 import com.wjysky.factory.cards.Cards;
-import com.wjysky.entity.bo.CardsCfgBO;
+import com.wjysky.pojo.bo.CardsCfgBO;
 
 /**
  * @ClassName : ICardFactory

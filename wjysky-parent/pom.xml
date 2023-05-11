@@ -19,6 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
         <springboot.dependencies.version>2.4.2</springboot.dependencies.version>
         <spring.cloud.version>2020.0.1</spring.cloud.version>
         <spring.cloud.alibaba.version>2021.1</spring.cloud.alibaba.version>
@@ -42,6 +43,7 @@
         <module>../wjysky-eureka</module>
         <module>../wjysky-gateway</module>
         <module>../wjysky-comm</module>
+        <module>../wjysky-components</module>
         <module>../wjysky-biz-comm</module>
         <module>../wjysky-framework</module>
         <module>../game-center</module>
@@ -175,6 +177,13 @@
             <scope>compile</scope>
         </dependency>
         <!-- okhttp3 S -->
+
+        <!-- AOP切面 S -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+        <!-- AOP切面 S -->
     </dependencies>
 
 <!--    <repositories>-->

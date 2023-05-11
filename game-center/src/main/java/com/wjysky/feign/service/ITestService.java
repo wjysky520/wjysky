@@ -1,7 +1,7 @@
 package com.wjysky.feign.service;
 
-import com.wjysky.entity.DataApi;
-import com.wjysky.entity.db.SystemConfig;
+import com.wjysky.pojo.DataApi;
+import com.wjysky.pojo.db.SystemConfig;
 import com.wjysky.feign.hystrix.TestHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;

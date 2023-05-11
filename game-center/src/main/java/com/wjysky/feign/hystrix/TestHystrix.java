@@ -1,11 +1,10 @@
 package com.wjysky.feign.hystrix;
 
-import com.wjysky.entity.DataApi;
-import com.wjysky.entity.db.SystemConfig;
+import com.wjysky.pojo.DataApi;
+import com.wjysky.pojo.db.SystemConfig;
 import com.wjysky.feign.service.ITestService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

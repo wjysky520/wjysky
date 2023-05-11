@@ -1,7 +1,7 @@
 package com.wjysky.service;
 
-import com.wjysky.entity.db.SysCfg;
-import com.wjysky.entity.query.SysCfgQuery;
+import com.wjysky.pojo.db.SysCfg;
+import com.wjysky.pojo.query.SysCfgQuery;
 
 import java.util.List;
 

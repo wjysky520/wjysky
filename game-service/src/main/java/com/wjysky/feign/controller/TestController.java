@@ -1,7 +1,7 @@
 package com.wjysky.feign.controller;
 
-import com.wjysky.entity.DataApi;
-import com.wjysky.entity.db.SystemConfig;
+import com.wjysky.pojo.DataApi;
+import com.wjysky.pojo.db.SystemConfig;
 import com.wjysky.facade.ISystemConfigFacade;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

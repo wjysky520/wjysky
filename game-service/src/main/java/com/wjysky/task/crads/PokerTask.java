@@ -1,7 +1,7 @@
 package com.wjysky.task.crads;
 
-import com.wjysky.entity.bo.poker.PokerBO;
-import com.wjysky.entity.bo.poker.PokerPlayerInfoBO;
+import com.wjysky.pojo.bo.poker.PokerBO;
+import com.wjysky.pojo.bo.poker.PokerPlayerInfoBO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
