@@ -18,6 +18,7 @@
         <module>wjysky-components-authorization</module>
         <module>wjysky-components-minio</module>
         <module>wjysky-components-idgenerator</module>
+        <module>wjysky-components-redis</module>
     </modules>
 
     <dependencyManagement>

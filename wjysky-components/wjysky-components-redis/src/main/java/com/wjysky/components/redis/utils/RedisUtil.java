@@ -1,4 +1,4 @@
-package com.wjysky.utils;
+package com.wjysky.components.redis.utils;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
