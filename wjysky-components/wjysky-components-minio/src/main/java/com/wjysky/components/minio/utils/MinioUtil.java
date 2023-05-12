@@ -1,11 +1,9 @@
-package com.example.components.minio.utils;
+package com.wjysky.components.minio.utils;
 
-import com.example.components.minio.config.MinioProperties;
+import com.wjysky.components.minio.config.MinioProperties;
 import io.minio.*;
 import io.minio.http.Method;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.InputStream;
@@ -51,7 +49,7 @@ public class MinioUtil {
         if (null != client) {
             return;
         }
-        log.info("开始初始化Minio存储服务\nurl：{}\nbucket：{}\n", url, bucket);
+        log.info("开始初始化Minio存储服务\nurl：{}\nbucket：{}", url, bucket);
         client = MinioClient.builder().endpoint(url).credentials(accessKey, secretKey).build();
         makeBucket(bucket);
         log.info("Minio存储服务初始化完毕");

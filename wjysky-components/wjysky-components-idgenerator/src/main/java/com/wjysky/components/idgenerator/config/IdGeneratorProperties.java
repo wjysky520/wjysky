@@ -1,4 +1,4 @@
-package com.example.components.idgenerator.config;
+package com.wjysky.components.idgenerator.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

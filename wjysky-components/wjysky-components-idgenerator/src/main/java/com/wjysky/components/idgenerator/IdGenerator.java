@@ -1,4 +1,4 @@
-package com.example.components.idgenerator;
+package com.wjysky.components.idgenerator;
 
 import cn.hutool.core.lang.Snowflake;
 

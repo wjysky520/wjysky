@@ -18,7 +18,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 @Slf4j
 @EnableEurekaClient
 @EnableFeignClients(basePackages = {"com.wjysky.feign.service"})
-@MapperScan("com.wjysky.dao")
+@MapperScan(basePackages = {"com.wjysky.dao", "com.wjysky.components.*.config"})
 public class Application implements CommandLineRunner {
 
     public static void main(String[] args) {

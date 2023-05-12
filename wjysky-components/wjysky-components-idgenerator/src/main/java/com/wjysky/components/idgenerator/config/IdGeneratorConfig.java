@@ -1,8 +1,8 @@
-package com.example.components.idgenerator.config;
+package com.wjysky.components.idgenerator.config;
 
 import cn.hutool.core.lang.Snowflake;
-import com.example.components.idgenerator.IdGenerator;
-import com.example.components.idgenerator.MySnowflake;
+import com.wjysky.components.idgenerator.IdGenerator;
+import com.wjysky.components.idgenerator.MySnowflake;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,9 +1,9 @@
 package com.wjysky.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.example.components.idgenerator.IdGenerator;
-import com.example.components.minio.utils.MinioUtil;
 import com.wjysky.components.authorization.annotation.PermissionAnnotation;
+import com.wjysky.components.idgenerator.IdGenerator;
+import com.wjysky.components.minio.utils.MinioUtil;
 import com.wjysky.pojo.DataApi;
 import com.wjysky.pojo.ao.GetSysCfgListAO;
 import com.wjysky.pojo.db.SysCfg;
